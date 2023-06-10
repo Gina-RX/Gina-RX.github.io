@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Gina's website</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        /* 创建关键帧 */
+        @keyframes rotates {
+            0%{transform: rotateX(-20deg) rotateY(0eg)}
+            25%{transform: rotateX(20deg) rotateY(90deg)}
+            50%{transform: rotateX(-20deg) rotateY(180deg)}
+            100%{transform: rotateX(20deg) rotateY(360deg)}
+        }
+        .warp{
+            width: 200px;
+            height: 150px;
+            margin:175px auto;
+            position: relative;
+            /* 是每个标签为3d效果 */
+            transform-style:preserve-3d;
+            /* 反转容器  是容器面对用户使用*/
+            transform:rotateX(-20deg);
+            animation: rotates 17s infinite linear alternate;
+
+        }
+        .warp:hover{
+            /* 指定动画是否正在运行或暂停
+            paused 暂停 running  */
+            animation-play-state: paused;
+        }
+        .warp li{
+            width: 200px;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10%;
+        }
+        .warp li>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10%;
+            -webkit-box-reflect: below 10px linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,1));
+        }
+        /* 处理各个li标签角度 */
+        .warp li:nth-child(1){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform: translateZ(350px)
+        }
+        .warp li:nth-child(2){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-36deg) translateZ(350px)
+        }
+        .warp li:nth-child(3){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-72deg) translateZ(350px)
+        }
+        .warp li:nth-child(4){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-108deg) translateZ(350px)
+        }
+        .warp li:nth-child(5){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-144deg) translateZ(350px)
+        }.warp li:nth-child(6){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-180deg) translateZ(350px)
+        }
+        .warp li:nth-child(7){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-216deg) translateZ(350px)
+        }
+        .warp li:nth-child(8){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-252deg) translateZ(350px)
+        }
+        .warp li:nth-child(9){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-288deg) translateZ(350px)
+        }
+        .warp li:nth-child(10){
+            /* z轴调节元素和人眼之家的距离 立体效果（）近大远小 */
+            transform:rotateY(-324deg) translateZ(350px)
+        }
+    </style>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" style="max-width:120px;margin-top:0px;" src="img/logo.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="award.html">Award</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Gallery
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="dailylife.html">Daily Life</a>
+              <a class="dropdown-item" href="myshoot.html">My Shoot</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <ul class="warp">
+        <li><img src="img/jdry/幻灯片27.png" alt="" onclick="window.location.href='jdry.html'"></li>
+        <li><img src="img/b.png" alt="" onclick="window.location.href='b.html'"></li>
+        <li><img src="img/ynby/ynby.png" alt="" onclick="window.location.href='ynby.html'"></li>
+        <li><img src="img/lhqw/lhqw.png" alt="" onclick="window.location.href='lhqw.html'"></li>
+        <li><img src="img/jcdc.png" alt="" onclick="window.location.href='jcdc.html'"></li>
+        <li><img src="img/dp.png" alt="" onclick="window.location.href='dp.html'"></li>
+        <li><img src="img/xyh.png" alt="" onclick="window.location.href='xyh.html'"></li>
+        <li><img src="img/hw/1.png" alt="" onclick="window.location.href='hw.html'"></li>
+        <li><img src="img/sdnr.png" alt="" onclick="window.location.href='sdnr.html'"></li>
+        <li><img src="img/grwy.png" alt="" onclick="window.location.href='index.html'"></li>
+    </ul>
+
+
+
+
+
+
+
+
+  </body>
+</html>
